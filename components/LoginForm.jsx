@@ -1,4 +1,6 @@
+
 import React, { useState } from 'react';
+import logo from '../assets/logo.png';
 
 const LoginForm = ({ onLoginSuccess }) => {
     const [username, setUsername] = useState('');
@@ -16,11 +18,8 @@ const LoginForm = ({ onLoginSuccess }) => {
     return (
         <div className="d-flex align-items-center justify-content-center h-100" style={{ fontFamily: 'Arial, sans-serif' }}>
             <div style={{ position: 'relative' }}>
-                <div className="mb-5 text-center">
-                    <h5 className="fw-bold fs-4" style={{ color: '#333333' }}>
-                        <i className="bi bi-mortarboard-fill me-2"></i>
-                        eLearning Platform
-                    </h5>
+                <div className="mb-5 text-center d-none d-md-block">
+                   <img src={logo} alt="eLearning Platform" style={{ height: '60px' }} />
                 </div>
 
                 <div className="card shadow-lg p-5" style={{ width: '100%', maxWidth: '400px', borderRadius: '15px', border: 'none' }}>
