@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../assets/logo.png';
+import mobileLogo from '../assets/logo-mobile.png';
 
 const Header = ({ onLogout }) => {
     const handleToggle = () => {
@@ -11,7 +12,10 @@ const Header = ({ onLogout }) => {
         <nav className="navbar navbar-expand-md navbar-light bg-light py-3 shadow-sm">
             <div className="container">
                 <a className="navbar-brand d-flex align-items-center" href="#">
-                    <img src={logo} alt="eLearning Platform" style={{ height: '40px' }} />
+                    {/* Desktop Logo */}
+                    <img src={logo} alt="eLearning Platform" className="d-none d-md-block" style={{ height: '40px' }} />
+                    {/* Mobile Logo */}
+                    <img src={mobileLogo} alt="eLearning Platform" className="d-block d-md-none" style={{ height: '40px' }} />
                 </a>
                 <button className="navbar-toggler" type="button" onClick={handleToggle} aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
